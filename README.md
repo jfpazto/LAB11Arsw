@@ -1,3 +1,6 @@
+### Integrantes
+Jonathan Paez
+Johan Guerrero
 ### Escuela Colombiana de Ingeniería
 ### Arquitecturas de Software - ARSW
 
@@ -34,76 +37,6 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 4. Dirijase al portal de Azure y pruebe la function.
 
 ![](images/part3/part3-test-function.png)
-
-## Creación de la aplicación de funciones
-
-Primero nos dirigimos al portal de [Portal de Azure](https://portal.azure.com/) y creamos la aplicación de funciones de la siguiente forma.
-
-![img](https://github.com//ARSW-Lab9/blob/main/images/readme/FunctionApp1.PNG)
-
-Luego en la pestaña **Hospedaje** establecemos los siguientes valores, que son los mismos del repositorio, quedando de la siguiente forma.
-
-![img](https://github.com//ARSW-Lab9/blob/main/images/readme/FunctionApp2.PNG)
-
-Después, en la pestaña **Supervisión**, habilitamos los insights de la aplicación y en los insights de la aplicación seleccionamos la que creamos al principio, que es **FunctionProjectFibonacciARSW**.
-
-![img](https://github.com//ARSW-Lab9/blob/main/images/readme/FunctionApp3.PNG)
-
-Ahora, en la pestaña **Etiquetas**, la dejamos tal cual y como se encuentra configurada por defecto, quedando de la siguiente forma.
-
-![img](https://github.com//ARSW-Lab9/blob/main/images/readme/FunctionApp4.PNG)
-
-Por último, para crear la aplicación de funciones, revisamos que todo haya quedado configurado correctamente en la pestaña **Revisar y crear**, para posteriormente darle clic sobre el botón **Crear** en la parte inferior de la pantalla.
-
-![img](https://github.com//ARSW-Lab9/blob/main/images/readme/FunctionApp5.PNG)
-
-Luego de crear la aplicación de funciones, se despliega la siguiente pantalla indicando que se ha completado la implementación de la función correspondiente.
-
-![img](https://github.com//ARSW-Lab9/blob/main/images/readme/FunctionApp6.PNG)
-
-## Despliegue de la aplicación de funciones desde Visual Studio Code
-
-Después de crear satisfactoriamente la aplicación de funciones desde Microsoft Azure, abrimos el proyecto en **Visual Studio Code**. Luego, instalamos la extensión **Azure Functions** de la siguiente forma.
-
-![img](https://github.com//ARSW-Lab9/blob/main/images/readme/Azure1.png)
-
-Luego, presionamos clic derecho sobre la función **FunctionProject** para posteriormente realizar clic izquierdo en **Deploy to Function App...**.
-
-![img](https://github.com//ARSW-Lab9/blob/main/images/readme/FunctionApp7.png)
-
-Por último, seleccionamos la función creada en **Microsoft Azure**, que es **FunctionProjectFibonacciARSW**.
-
-![img](https://github.com//ARSW-Lab9/blob/main/images/readme/FunctionApp8.PNG)
-
-Luego de desplegar la función a Microsoft Azure desde VIsual Studio Code, se observa un consumo de memoria, indicando que la función se desplegó satisfactoriamente utilizando los recursos correspondientes para la operación, como se puede ver a continuación.
-
-![img](https://github.com//ARSW-Lab9/blob/main/images/readme/GraficoMemoria.PNG)
-
-5. Modifique la coleción de POSTMAN con NEWMAN de tal forma que pueda enviar 10 peticiones concurrentes. Verifique los resultados y presente un informe.
-
-	![img](https://github.com//ARSW-Lab9/blob/main/images/readme/5.1.PNG)
-
-	![img](https://github.com//ARSW-Lab9/blob/main/images/readme/5.2.png)
-
-Como puede ser observado en las imágenes de prueba de lo realizado, todas las peticiones tuvieron un resultado exitoso.
-
-6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.
-
-	Primero, se realizaron dos pruebas, en la primera se calculó el 1000 n-ésimo número y en la segunda el 10000 n-ésimo número.
-
-	**Primera prueba**
-
-	![img](https://github.com//ARSW-Lab9/blob/main/images/readme/6.2.PNG)
-
-	![img](https://github.com//ARSW-Lab9/blob/main/images/readme/6.3.1.png)
-
-	**Segunda Prueba**
-
-	![img](https://github.com//ARSW-Lab9/blob/main/images/readme/6.4.1.png)
-
-	![img](https://github.com//ARSW-Lab9/blob/main/images/readme/6.5.1.png)
-
-	Como se puede observar en la primera prueba, todas las peticiones fueron exitosas, mientras que en la segunda prueba todas las peticiones fallaron debido a los límites de la recursión. Además, con este nuevo enfoque los tiempos de respuesta se redujeron bastante.
 
 **Preguntas**
 
@@ -152,4 +85,57 @@ Como puede ser observado en las imágenes de prueba de lo realizado, todas las p
 * ¿Cómo funciona el sistema de facturación de las Function App?  
 
 	Functions se factura según el consumo de recursos observado, medido en gigabytes por segundos (GB-s). El consumo de recursos observado se calcula multiplicando el tamaño medio de memoria en GB por el tiempo en milisegundos que dura la ejecución de la función. La memoria que una función utiliza se mide redondeando al alza a los 128 MB más cercanos hasta un tamaño de memoria máximo de 1.536 MB, y el tiempo de ejecución se redondea al alza a los 1 ms más cercanos. Para la ejecución de una única función, el tiempo de ejecución mínimo es de 100 ms y la memoria mínima es de 128 MB, respectivamente. Los precios de Functions incluyen una concesión gratuita al mes de 400.000 GB-segundos.
+	
+**Informe**
+
+Al realizar los pasos anteriores tenemos en la configuracion lo siguiente
+
+![img](https://github.com/jfpazto/LAB11Arsw/blob/master/images/readme/Captura1.PNG)
+
+Por último, para crear la aplicación de funciones, revisamos que todo haya quedado configurado correctamente en la pestaña **Revisar y crear**, para posteriormente darle clic sobre el botón **Crear** en la parte inferior de la pantalla.
+
+Luego de crear la aplicación de funciones, se despliega la siguiente pantalla indicando que se ha completado la implementación de la función correspondiente.
+
+![img](https://github.com/jfpazto/LAB11Arsw/blob/master/images/readme/Captura2.PNG)
+
+## Despliegue de la aplicación de funciones desde Visual Studio Code
+
+Después de crear satisfactoriamente la aplicación de funciones desde Microsoft Azure, abrimos el proyecto en **Visual Studio Code**. Luego, instalamos la extensión **Azure Functions** 
+
+Seleccionamos la función creada en **Microsoft Azure** FuntionProjectfibonacci
+
+![img](https://github.com/jfpazto/LAB11Arsw/blob/master/images/readme/Captura3.PNG)
+
+y Desplegamos
+
+![img](https://github.com/jfpazto/LAB11Arsw/blob/master/images/readme/Captura4.PNG)
+
+Luego de desplegar la función a Microsoft Azure desde VIsual Studio Code, se observa un consumo de memoria, indicando que la función se desplegó satisfactoriamente utilizando los recursos correspondientes para la operación, como se puede ver a continuación.
+
+![img](https://github.com/jfpazto/LAB11Arsw/blob/master/images/readme/Captura6.PNG)
+
+5. Modifique la coleción de POSTMAN con NEWMAN de tal forma que pueda enviar 10 peticiones concurrentes. Verifique los resultados y presente un informe.
+
+	![img](https://github.com//ARSW-Lab9/blob/main/images/readme/5.1.PNG)
+
+	![img](https://github.com//ARSW-Lab9/blob/main/images/readme/5.2.png)
+
+
+6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.
+
+	Primero, se realizaron dos pruebas, en la primera se calculó el 1000 n-ésimo número y en la segunda el 10000 n-ésimo número.
+
+	**Primera prueba**
+
+	![img](https://github.com//ARSW-Lab9/blob/main/images/readme/6.2.PNG)
+
+	![img](https://github.com//ARSW-Lab9/blob/main/images/readme/6.3.1.png)
+
+	**Segunda Prueba**
+
+	![img](https://github.com//ARSW-Lab9/blob/main/images/readme/6.4.1.png)
+
+	![img](https://github.com//ARSW-Lab9/blob/main/images/readme/6.5.1.png)
+
+	Como se puede observar en la primera prueba todas las peticiones fueron exitosas, mientras que en la segunda prueba todas las peticiones fallaron debido a los límites de la recursión. Además, con este nuevo enfoque los tiempos de respuesta se redujeron bastante.
 

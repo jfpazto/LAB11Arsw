@@ -117,9 +117,9 @@ Luego de desplegar la función a Microsoft Azure desde VIsual Studio Code, se ob
 
 5. Modifique la coleción de POSTMAN con NEWMAN de tal forma que pueda enviar 10 peticiones concurrentes. Verifique los resultados y presente un informe.
 
-	![img](https://github.com//ARSW-Lab9/blob/main/images/readme/5.1.PNG)
+	![img](https://github.com/jfpazto/LAB11Arsw/blob/master/images/readme/5.1.PNG)
 
-	![img](https://github.com//ARSW-Lab9/blob/main/images/readme/5.2.png)
+	![img](https://github.com/jfpazto/LAB11Arsw/blob/master/images/readme/5.2.png)
 
 
 6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.
@@ -128,15 +128,15 @@ Luego de desplegar la función a Microsoft Azure desde VIsual Studio Code, se ob
 
 	**Primera prueba**
 
-	![img](https://github.com//ARSW-Lab9/blob/main/images/readme/6.2.PNG)
+	![img](https://github.com/jfpazto/LAB11Arsw/blob/master/images/readme/6.2.PNG)
 
-	![img](https://github.com//ARSW-Lab9/blob/main/images/readme/6.3.1.png)
+	![img](https://github.com/jfpazto/LAB11Arsw/blob/master/images/readme/6.3.1.png)
 
 	**Segunda Prueba**
 
-	![img](https://github.com//ARSW-Lab9/blob/main/images/readme/6.4.1.png)
+	![img](https://github.com/jfpazto/LAB11Arsw/blob/master/images/readme/6.4.1.png)
 
-	![img](https://github.com//ARSW-Lab9/blob/main/images/readme/6.5.1.png)
+	![img](https://github.com/jfpazto/LAB11Arsw/blob/master/images/readme/6.5.1.png)
 
 	Como se puede observar en la primera prueba todas las peticiones fueron exitosas, mientras que en la segunda prueba todas las peticiones fallaron debido a los límites de la recursión. Además, con este nuevo enfoque los tiempos de respuesta se redujeron bastante.
 
